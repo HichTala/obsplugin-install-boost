@@ -16,6 +16,12 @@ add_library(${CMAKE_PROJECT_NAME} MODULE)
 find_package(libobs REQUIRED)
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE OBS::libobs)
 
+message(STATUS "CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
+message(STATUS "Boost_DIR: ${Boost_DIR}")
+message(STATUS "BOOST_ROOT: ${BOOST_ROOT}")
+message(STATUS "BOOST_VER: ${BOOST_VER}")
+message(STATUS "CMAKE_MODULE_PATH: ${CMAKE_MODULE_PATH}")
+
 find_package(Boost REQUIRED COMPONENTS interprocess)
 
 if(ENABLE_FRONTEND_API)
