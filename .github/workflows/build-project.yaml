@@ -103,7 +103,11 @@ jobs:
         uses: MarkusJx/install-boost@v2.5.0
         with:
           boost_version: 1.88.0
-          platform_version: 2022          
+          toolset: msvc
+          platform_version: 2022
+          link: static
+          arch: x86
+          cache: true
 
       - name: Build Plugin 🧱
         uses: ./.github/actions/build-plugin
