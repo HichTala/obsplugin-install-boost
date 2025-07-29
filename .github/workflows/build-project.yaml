@@ -99,6 +99,13 @@ jobs:
           "pluginName=${ProductName}" >> $env:GITHUB_OUTPUT
           "pluginVersion=${ProductVersion}" >> $env:GITHUB_OUTPUT
 
+      - name: Download and install Boost
+        uses: MarkusJx/install-boost@v2.5.0
+        with:
+          boost_version: 1.88
+          toolset: mscv
+          platform_version: 2022          
+
       - name: Build Plugin 🧱
         uses: ./.github/actions/build-plugin
         with:
