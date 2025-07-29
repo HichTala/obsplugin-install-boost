@@ -70,7 +70,9 @@ function Build {
         '--config', $Configuration
     )
 
+    "Hello, World!"
     if ($env:BOOST_ROOT) {
+        "Hello, World!"
         if ($env:CMAKE_PREFIX_PATH) {
             $env:CMAKE_PREFIX_PATH = "$env:BOOST_ROOT;$env:CMAKE_PREFIX_PATH"
         } else {
