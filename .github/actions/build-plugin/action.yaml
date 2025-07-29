@@ -24,6 +24,10 @@ inputs:
     description: Working directory for packaging
     required: false
     default: ${{ github.workspace }}
+  boostRoot:
+    description: Boost installation path
+    required: false
+    default: ''
 runs:
   using: composite
   steps:
@@ -43,7 +47,7 @@ runs:
 
         .github/scripts/Build-Windows.ps1 @BuildArgs
       env:
-        BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
+        BOOST_ROOT: ${{ ${{ inputs.boostRoot }} }}
 
     - name: Create Summary 📊
       if: contains(fromJSON('["Linux", "macOS"]'),runner.os)
