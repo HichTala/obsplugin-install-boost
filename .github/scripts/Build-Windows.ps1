@@ -76,7 +76,7 @@ function Build {
         } else {
             $env:CMAKE_PREFIX_PATH = "$env:BOOST_ROOT"
         }
-        Write-Host "BOOST_ROOT set to $env:BOOST_ROOT"
+        Write-Host "Boost_DIR set to $env:BOOST_ROOT"
         Write-Host "CMAKE_PREFIX_PATH set to $env:CMAKE_PREFIX_PATH"
     }
 
