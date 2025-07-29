@@ -111,7 +111,7 @@ jobs:
 
       - name: Print Boost folders
         run: |
-          dir D:\a\obsplugin-install-boost\obsplugin-install-boost\
+          dir D:\a\obsplugin-install-boost\obsplugin-install-boost\boost
           
       - name: Print env variables
         shell: pwsh
