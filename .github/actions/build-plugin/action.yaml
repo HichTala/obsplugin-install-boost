@@ -47,7 +47,7 @@ runs:
 
         .github/scripts/Build-Windows.ps1 @BuildArgs
       env:
-        BOOST_ROOT: ${{ ${{ inputs.boostRoot }} }}
+        BOOST_ROOT: ${{ inputs.boostRoot }}
 
     - name: Create Summary 📊
       if: contains(fromJSON('["Linux", "macOS"]'),runner.os)
