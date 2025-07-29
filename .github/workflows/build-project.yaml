@@ -109,6 +109,18 @@ jobs:
           arch: x86
           cache: true
 
+      - name: Print Boost folders
+        run: |
+          dir D:\a\obsplugin-install-boost\obsplugin-install-boost\
+          
+      - name: Print env variables
+        shell: pwsh
+        run: |
+          echo "CMAKE_PREFIX_PATH: $env:CMAKE_PREFIX_PATH"
+          echo "Boost_DIR: $env:Boost_DIR"
+          echo "BOOST_ROOT: $env:BOOST_ROOT"
+          echo "BOOST_VER: $env:BOOST_VER"
+
       - name: Build Plugin 🧱
         uses: ./.github/actions/build-plugin
         with:
