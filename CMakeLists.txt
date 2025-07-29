@@ -22,7 +22,8 @@ message(STATUS "BOOST_ROOT: ${BOOST_ROOT}")
 message(STATUS "BOOST_VER: ${BOOST_VER}")
 message(STATUS "CMAKE_MODULE_PATH: ${CMAKE_MODULE_PATH}")
 
-find_package(Boost REQUIRED COMPONENTS interprocess)
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
 
 if(ENABLE_FRONTEND_API)
   find_package(obs-frontend-api REQUIRED)
